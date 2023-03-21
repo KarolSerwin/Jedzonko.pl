@@ -1,0 +1,165 @@
+.add-recipe__container {
+	padding: 2.5em;
+	width: 90%;
+	height: 90%;
+	background-position: center center;
+	border: 2px dashed $color-sidebar-navi;
+	background-color: $color-background;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+.add-new {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid $color-text-icons;
+	margin-bottom: 5px;
+	font-family: "Open Sans", sans-serif;
+	& h1 {
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $color-buttons-highlights-header-screen;
+		font-size: 24px;
+	}
+	& button {
+		background-color: $color-buttons-highlights-header-screen;
+		border: none;
+		padding: 5px 10px;
+		font-weight: 800;
+		color: $color-background;
+		margin-bottom: 5px;
+	}
+}
+
+.add-new__recipe {
+	display: flex;
+	flex-direction: column;
+	font-family: "Open Sans", sans-serif;
+	.add-new__recipe__title,
+	.add-new__recipe__description {
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		margin-left: 20px;
+		margin-right: 50px;
+		color: $color-sidebar-navi;
+		span {
+			margin-bottom: 30px;
+		}
+		input {
+			height: 20px;
+			width: 75%;
+			margin-top: 2px;
+			border: 1px solid $color-text-icons;
+		}
+		span:last-child {
+			margin-bottom: 30px;
+		}
+		textarea {
+			height: 7em;
+			width: 75%;
+			margin-bottom: 2px;
+			margin-top: 2px;
+			border: 1px solid $color-text-icons;
+		}
+	}
+}
+.add-new__elements {
+	display: flex;
+	justify-content: space-between;
+	font-family: "Open Sans", sans-serif;
+	margin-top: 30px;
+	gap: 25px;
+
+	.add-new__instructions,
+	.add-new__ingredients {
+		width: 50%;
+
+		h2 {
+			font-size: 20px;
+			color: $color-text-icons;
+			text-transform: uppercase;
+		}
+		.line {
+			margin-top: 5px;
+			border-bottom: 1px solid $color-text-icons;
+		}
+		textarea {
+			width: 90%;
+			height: 50px;
+			position: relative;
+			margin-top: 10px;
+		}
+		input {
+			margin-top: 10px;
+			width: 90%;
+			height: 20px;
+			position: relative;
+		}
+
+		i {
+			height: 20px;
+			width: 20px;
+			padding: 0;
+			position: absolute;
+			margin-top: 9px;
+			margin-left: 5px;
+			color: $color-message-success;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+		.fa-badge-check {
+			background-color: #e79696;
+		}
+	}
+	.steps-list__instruction {
+		overflow-y: scroll;
+		max-height: 200px;
+		margin-top: 10px;
+		list-style-type: decimal;
+
+		li {
+			display: list-item;
+			list-style-position: inside;
+			margin-bottom: 10px;
+			margin-top: 10px;
+		}
+
+		.fa-edit,
+		.fa-trash-alt {
+			margin-left: 10px;
+			color: $color-message-warning;
+			cursor: pointer;
+		}
+		.fa-trash-alt {
+			color: $color-icon-bin;
+		}
+	}
+
+	.steps-list__ingredients {
+		margin-top: 41px;
+		overflow-y: scroll;
+		height: 40%;
+		li {
+			position: relative;
+			margin-top: 10px;
+			margin-left: 20px;
+
+			.fa-edit,
+			.fa-trash-alt {
+				margin-left: 10px;
+				color: $color-message-warning;
+				cursor: pointer;
+			}
+			.fa-trash-alt {
+				color: $color-icon-bin;
+			}
+		}
+	}
+}
+.add-new__ingredients input {
+	height: 20px;
+}

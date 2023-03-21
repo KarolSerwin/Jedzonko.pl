@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Zaplanuj Jedzonko</title>
+  <link rel="stylesheet" href="./scss/main.scss" />
+</head>
+
+<body>
+  <header class="app-header">
+    <a href="./app.html">
+      <h1>Zaplanuj <span>Jedzonko</span></h1>
+    </a>
+    <div class="app-header__user">
+      <span class="app-header__user-name">Imię</span>
+      <i class="fas fa-user-circle"></i>
+    </div>
+  </header>
+  <div class="app-content">
+    <aside class="app-content__sidebar">
+      <ul class="app-content__sidebar-list">
+        <li>
+          <a href="./app.html">Pulpit</a>
+        </li>
+        <li>
+          <a class="app-content__sidebar-list__active" href="./recipes.html">Przepisy</a>
+          <!-- do dodania podpięcie do przepisów -->
+        </li>
+        <li>
+          <a href="./schedules.html">Plany</a> <!-- dodania podpięcie do planów -->
+        </li>
+      </ul>
+    </aside>
+    <main class="app-content__main">
+      <!--<section class="app-content__main&#45;&#45;first-entry">
+        <div class="app-content__main&#45;&#45;first-entry_wrapper">
+          <h2 class="app-content__main&#45;&#45;first-entry_wrapper_h2">Witaj,</h2>
+          <h3 class="app-content__main&#45;&#45;first-entry_wrapper_h3">wygląda na to że jesteś tutaj
+            pierwszy raz!</h3>
+          <form class="app-content__main&#45;&#45;first-entry_wrapper__form">
+            <input type="text" placeholder="tutaj wpisz jak masz na imię" maxlength="50" minlength="2"
+                   class="app-content__main&#45;&#45;first-entry_wrapper__form&#45;&#45;input">
+            <button type="submit" class="app-content__main&#45;&#45;first-entry_wrapper__form&#45;&#45;button">
+              Gotowe!
+            </button>
+          </form>
+          <h4 class="app-content__main&#45;&#45;first-entry_wrapper_h4">
+            Podaj nam swoje imię, a my zorganizujemy dla Ciebie naszą aplikację :)
+          </h4>
+        </div>
+      </section>-->
+      <section class="recipes__main--container">
+        <div class="recipes__container">
+          <div class="recipes__header">
+            <h1 class="main__title">LISTA PRZEPISÓW</h1>
+            <div class="icon__plus">
+              <!-- <a
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Scrollbars" -->
+              <i class="fas fa-plus-square fa-2x"></i>
+            </div>
+          </div>
+          <div class="second__recipes--header">
+            <h2 id="selector">ID</h2>
+            <h2 id="recipe__name">NAZWA</h2>
+            <h2 id="description">OPIS</h2>
+            <h2 id="actions__buttons">AKCJE</h2>
+          </div>
+          <div class="recipe__list">
+            <ol class="ol__list"></ol>
+          </div>
+        </div>
+      </section>
+      <div class="add-recipe__container">
+        <div class="add-new">
+          <h1>Nowy przepis</h1>
+          <button id="add-recipe--btn">Zapisz i zamknij</button>
+        </div>
+        <div class="add-new__recipe">
+          <div class="add-new__recipe__title">
+            <span>Nazwa przepisu</span>
+            <input type="Nazwa przepisu" id="recipe__title">
+          </div>
+
+          <div class="add-new__recipe__description">
+            <span>Opis przepisu</span>
+            <textarea name="Opis przepisu" cols="1" rows="1" id="recipe__description"></textarea>
+          </div>
+        </div>
+        <div class="add-new__elements">
+
+          <div class="add-new__instructions">
+            <h2 class="instructions">Instrukcje</h2>
+            <div class="line"></div>
+            <textarea id="instruction" name="Składniki" cols="10" rows="5"></textarea>
+            <i class="fas fa-plus-square fa-2x" id="plus--instruction"></i>
+            <i class="fas fa-plus-square fa-2x" style="display:none;" id="plus--edit--instruction"></i>
+            <ol class="steps-list__instruction" type="1"></ol>
+          </div>
+
+
+          <div class="add-new__ingredients">
+            <h2 class="ingredients">Składniki</h2>
+            <div class="line"></div>
+            <input type="Instrukcje" id="ingredient">
+            <i class="fas fa-plus-square fa-2x" id="plus--ingredient"></i>
+            <i class="fas fa-plus-square fa-2x" id="plus--edit--ingredient" style="display:none;"></i>
+            <dl class="steps-list__ingredients"></dl>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./js/app.js" type="module"></script>
+</body>
+
+</html>

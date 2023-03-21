@@ -1,0 +1,44 @@
+.carousel {
+	position: relative;
+	&__value {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 50%;
+		height: 40vh;
+		margin: 0 auto;
+
+		h2 {
+			font-size: 2em;
+		}
+		p {
+			margin-top: 2em;
+			text-align: center;
+		}
+		img {
+			margin-top: 2em;
+			display: block;
+			max-height: 164px;
+		}
+	}
+
+	&__arrow-left {
+		right: 95%;
+		border-left: 2px solid black;
+		border-bottom: 2px solid black;
+	}
+	&__arrow-right {
+		left: 95%;
+		border-top: 2px solid black;
+		border-right: 2px solid black;
+	}
+}
+.arrow {
+	position: absolute;
+	top: 50%;
+	transform: rotate(45deg) translateY(-50%);
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}

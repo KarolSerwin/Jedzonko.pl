@@ -1,0 +1,120 @@
+
+.app-content__main--new-plan {
+    background-color: $color-background;
+    border: dashed $color-sidebar-navi;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    width: 90%;
+    color: $color-header-column-text;
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 10;
+
+    &_wrapper{
+      width: 90%;
+      height: 90%;
+
+      &_title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $color-text-icons;
+
+        h3{
+          font-size: 30px;
+          font-family: $font-text;
+          color: $color-buttons-highlights-header-screen;
+          font-weight: 500;
+        }
+
+        &_button{
+          background-color: $color-buttons-highlights-header-screen;
+          border: none;
+          color: $color-text-app;
+          padding: 8px 15px;
+          font-size: 18px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+
+      &_specification{
+        display: flex;
+        flex-direction: column;
+
+        &_description{
+          display: flex;
+          //justify-content: space-between;
+          font-size: 24px;
+          margin: 10px 20px;
+          color: $color-sidebar-navi;
+
+          h4{
+            width: 190px;
+          }
+
+          input, textarea{
+            max-width: 1000px;
+            margin-right: 80px;
+            padding: 3px 10px;
+            min-width: 100px;
+
+
+            &:focus{
+              outline: none;
+            }
+          }
+
+          .input_name{
+            width: 1000px;
+
+          }
+          .input_description{
+            max-height: 120px;
+            min-height: 50px;
+            width: 1000px;
+          }
+          .input_week{
+            max-width: 30px;
+            min-width: 30px;
+          }
+
+
+        }
+      }
+      &_table{
+        width: 90%;
+        margin: 50px auto;
+        font-size: 20px;
+        font-weight: 700;
+
+        tr{
+            border-bottom: 2px solid $color-text-icons;
+            border-top: 2px solid $color-text-icons;
+            height: 42px;
+
+
+            th{
+                width: 300px;
+                padding: 10px 0;
+
+            }
+
+            .dropdown{
+                padding: 10px 50px;
+
+                select{
+                    width: 120px;
+                }
+
+        }
+      }
+    }
+  }
+}
